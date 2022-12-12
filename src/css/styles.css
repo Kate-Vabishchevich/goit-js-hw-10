@@ -18,3 +18,35 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.country-list__item, .country-info__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.card-info__prop {
+  font-size: 18px;
+  font-weight: 600;
+}
