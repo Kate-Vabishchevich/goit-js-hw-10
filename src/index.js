@@ -12,14 +12,14 @@ refs.searchBox.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(e) {
     e.preventDefault();
-
+    
     const country = e.target.value.trim();
-    clearData();
+    
 
     if (!country) {
         return
     }
-
+clearData();
     fetchCountries(country).then(renderData).catch(onError)
 }
 
@@ -80,7 +80,7 @@ function renderData(items) {
 
     else {
         const markupInfo = countryInfoTpl(items);
-        refs.countryInfo.insertAdjacentHTML('beforeend', markupInfo);
+        refs.countryInfo.innerHTML = markupInfo;
         refs.countryList.innerHTML = "";
     }
 }
